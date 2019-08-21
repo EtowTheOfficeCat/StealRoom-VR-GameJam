@@ -6,11 +6,13 @@ using Valve.VR;
 public class Hand : MonoBehaviour
 {
     public SteamVR_Action_Boolean PickUpAction = null;
+    public GameObject HandObj;
 
     private SteamVR_Behaviour_Pose pose = null;
     private FixedJoint joint = null;
 
     private Interactable currentInteractable = null;
+    
     public List<Interactable> contactInteractables = new List<Interactable>();
 
     private void Awake()
@@ -24,13 +26,13 @@ public class Hand : MonoBehaviour
     {
         if (PickUpAction.GetStateDown(pose.inputSource))
         {
-            print(pose.inputSource + "Trigger Down");
+            
             PickUp();
         }
 
         if (PickUpAction.GetStateUp(pose.inputSource))
         {
-            print(pose.inputSource + "Trigger Down");
+            
             Drop();
         }
     }
@@ -64,6 +66,8 @@ public class Hand : MonoBehaviour
 
         currentInteractable.ActiveHand = this;
 
+        HandObj.SetActive(false);
+
     }
      public void Drop()
     {
@@ -78,6 +82,8 @@ public class Hand : MonoBehaviour
 
         currentInteractable.ActiveHand = null;
         currentInteractable = null;
+
+        HandObj.SetActive(true);
     }
 
     private Interactable GetNearestInteractable()
