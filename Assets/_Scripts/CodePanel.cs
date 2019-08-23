@@ -66,7 +66,8 @@ public class CodePanel : MonoBehaviour
         {
             codeTextRight.text = rightCode;
             codeTextValue = "";
-            Door.AddComponent<Interactable>();
+            
+            Door.AddComponent<InterActiveDoor>();
         }
         else
             codeTextRight.text = wrongCode;
