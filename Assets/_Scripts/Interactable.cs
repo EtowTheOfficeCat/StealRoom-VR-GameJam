@@ -9,9 +9,6 @@ public class Interactable : MonoBehaviour
     public Hand ActiveHand = null;
     
 
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
+   
 
 }
