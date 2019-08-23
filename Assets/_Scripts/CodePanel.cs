@@ -6,13 +6,21 @@ using TMPro;
 
 public class CodePanel : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI codeText;
+    [SerializeField] TextMeshProUGUI codeText;
     [SerializeField] TextMeshProUGUI codeTextRight;
+    [SerializeField] GameObject Door;
+    
+    
+
     string codeTextValue = "";
     string rightCode = "Right Code";
     string wrongCode = "wrong code";
 
+    private void Start()
+    {
+        
+        
+    }
     private void Update()
     {
         codeText.text = codeTextValue;
@@ -58,6 +66,7 @@ public class CodePanel : MonoBehaviour
         {
             codeTextRight.text = rightCode;
             codeTextValue = "";
+            Door.AddComponent<Interactable>();
         }
         else
             codeTextRight.text = wrongCode;
