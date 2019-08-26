@@ -10,6 +10,9 @@ TagManager:
   - Button1
   - Button0
   - ButtonEnter
+  - Position1
+  - Position2
+  - Position3
   layers:
   - Default
   - TransparentFX
@@ -24,7 +27,7 @@ TagManager:
   - Commode
   - Drawer
   - IndexFinger
-  - 
+  - Controller
   - 
   - 
   - 
