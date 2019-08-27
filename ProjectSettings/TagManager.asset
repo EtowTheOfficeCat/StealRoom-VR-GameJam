@@ -13,6 +13,8 @@ TagManager:
   - Position1
   - Position2
   - Position3
+  - Torch
+  - OuterTorch
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Drawer
   - IndexFinger
   - Controller
-  - 
+  - Torch
   - 
   - 
   - 
