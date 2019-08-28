@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b1a47098430ab7c4f969ffd2d254c72d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sensations and Qualities
+  fontNames:
+  - Sensations and Qualities
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 15717818bd4c9a34fa98bf3a7424dbe5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,12 +11,12 @@ public class Button : MonoBehaviour
 
     private void Start()
     {
-        PointAZ = PointA.position.y;
-        PointBZ = PointB.position.y;
+        PointAZ = PointA.position.x;
+        PointBZ = PointB.position.x;
 
     }
     private void Update()
     {
-        transform.position = new Vector3((transform.position.x), Mathf.Clamp(transform.position.y, PointBZ, PointAZ), (transform.position.z));
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, PointBZ, PointAZ), (transform.position.y), (transform.position.z));
     }
 }
