@@ -25,6 +25,12 @@ public class PinWallObject : Interactable
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+            GetComponent<Rigidbody>().useGravity = true;
+            gameObject.transform.parent = null;
+        }
         if (other.CompareTag(Positiontext) ) 
         {
             this.transform.position = Vector1;

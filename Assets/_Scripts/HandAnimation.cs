@@ -26,6 +26,7 @@ public class HandAnimation : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         animator.SetBool("Point", true);
+
     }
 
     private void OnTriggerExit(Collider other)

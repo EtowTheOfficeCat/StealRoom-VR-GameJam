@@ -10,12 +10,14 @@ public class InterActiveDrawer : Interactable
 
     private void Start()
     {
-        PointAZ = PointA.position.z;
-        PointBZ = PointB.position.z;
+        PointAZ = PointA.position.x;
+        PointBZ = PointB.position.x;
 
     }
     private void Update()
     {
-        transform.position = new Vector3((transform.position.x), (transform.position.y), Mathf.Clamp(transform.position.z, PointBZ, PointAZ));
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, PointBZ, PointAZ), (transform.position.y), (transform.position.z));
     }
+
+
 }
