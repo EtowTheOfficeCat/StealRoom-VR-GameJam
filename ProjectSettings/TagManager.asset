@@ -26,6 +26,7 @@ TagManager:
   - Position4
   - Position5
   - Position6
+  - Key
   layers:
   - Default
   - TransparentFX

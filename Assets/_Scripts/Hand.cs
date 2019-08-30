@@ -8,7 +8,7 @@ public class Hand : MonoBehaviour
     public SteamVR_Action_Boolean PickUpAction = null;
     public GameObject HandObj;
 
-    public static bool GrabTrue = false;
+    public bool GrabTrue = false;
 
     private SteamVR_Behaviour_Pose pose = null;
     private FixedJoint joint = null;

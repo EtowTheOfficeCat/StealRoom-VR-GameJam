@@ -113,7 +113,7 @@ public class CodePanel : MonoBehaviour
 
     public void EnterCode()
     {
-        if (codeTextValue == "0101")
+        if (codeTextValue == "0000")
         {
             codeTextRight.text = rightCode;
             codeTextValue = "";

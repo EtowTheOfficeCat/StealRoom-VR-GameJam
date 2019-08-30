@@ -10,23 +10,14 @@ public class ChangeText : MonoBehaviour
     public Color newColor;
     public Color HalfColor;
     public Color OriginalColor;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey (KeyCode.A))
-        {
-            myText.color = newColor;
-        }
-    }
+   
+    
 
     private void OnTriggerEnter(Collider other)
     {
+        if (LightSwitch.RoomLightOn == true)
+            return;
+
         if (other.CompareTag("Torch"))
         {
             myText.color = newColor;
