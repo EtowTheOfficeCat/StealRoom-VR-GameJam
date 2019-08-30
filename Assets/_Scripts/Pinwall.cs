@@ -13,8 +13,8 @@ public class Pinwall : MonoBehaviour
     private void Update()
     {
         if(allThere == counter)
-        {
-            
+        { 
+        
             door2.AddComponent<InterActiveDoor>();
         }
     }
