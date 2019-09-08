@@ -9,7 +9,7 @@ public class DoorKey : MonoBehaviour
     {
         if (other.CompareTag("Key"))
         {
-            Door.AddComponent<InterActiveDoor>();
+            Door.AddComponent<Interactable>();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LightSwitch : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class LightSwitch : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            
             if (!RoomLight.activeSelf)
             {
                 Debug.Log("light not active");
                 RoomLight.SetActive(true);
                 RoomLightOn = true;
+                
             }
             else if (RoomLight.activeSelf)
             {

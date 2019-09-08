@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    
     public Transform PointA;
     public Transform PointB;
     float PointAZ;
