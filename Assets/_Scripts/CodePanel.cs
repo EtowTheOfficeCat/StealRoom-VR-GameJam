@@ -20,10 +20,16 @@ public class CodePanel : MonoBehaviour
     [SerializeField] AudioSource Policeman;
 
     [SerializeField] GameObject GameOver;
+    [SerializeField] GameObject GameWon;
+
+    [SerializeField] GameObject GameOverText;
+    [SerializeField] GameObject GameWonText;
+
 
     private float timer = 3;
     private int WrongAmountAllowed = 3;
     private int Attempts = 0;
+    private bool isGameOver = false;
 
     string codeTextValue = "";
     string rightCode = "Right Code";
@@ -40,6 +46,10 @@ public class CodePanel : MonoBehaviour
         
         if(Attempts == WrongAmountAllowed)
         {
+            if (isGameOver == true)
+            {
+                return;
+            }
             StartCoroutine(GameStop());
             Attempts = 0;
          }
@@ -149,6 +159,8 @@ public class CodePanel : MonoBehaviour
             Door.AddComponent<Interactable>();
             CodeButtons.SetActive(false);
             codeButtonsNew.SetActive(true);
+
+            StartCoroutine(GameDone());
         }
         else
             codeTextRight.text = wrongCode;
@@ -161,6 +173,8 @@ public class CodePanel : MonoBehaviour
 
     public IEnumerator GameStop ()
     {
+        
+            
         yield return new WaitForSeconds(2);
 
         GameOver.SetActive(true);
@@ -168,8 +182,18 @@ public class CodePanel : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         Policeman.Play();
+        GameOverText.SetActive(true);
         Time.timeScale = 0f;
 
 
+    }
+
+    public IEnumerator GameDone()
+    {
+        yield return new WaitForSeconds(4);
+
+        GameWon.SetActive(true);
+        GameWonText.SetActive(true);
+        isGameOver = true;
     }
 }

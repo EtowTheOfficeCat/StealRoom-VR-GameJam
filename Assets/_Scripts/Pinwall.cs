@@ -6,7 +6,7 @@ public class Pinwall : MonoBehaviour
 {
     
     public GameObject door2;
-    private int allThere = 7;
+    private int allThere = 6;
     private int counter = 0;
 
 
